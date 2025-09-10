@@ -1,275 +1,258 @@
-/* =========================
-   General Styles
-========================= */
+/* ===== General Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== Body ===== */
 body {
-  padding-top: 70px; /* Prevents content hiding behind fixed header */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ffffff;   /* White background */
+  color: #222;                 /* Dark text for readability */
   line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
 }
 
-/* =========================
-   Header + Navigation
-========================= */
+/* ===== Header & Navigation ===== */
 header {
-  position: fixed;
+  background: #ffffff;         /* White header */
+  padding: 1rem 2rem;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
+  border-bottom: 2px solid #008000; /* Green accent line */
 }
 
-/* Navigation Bar Container */
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #0a3d62; /* dark blue */
-  color: #fff;
-  padding: 10px 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  align-items: center;
 }
 
-/* Logo + Brand */
-.nav-logo {
+.logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
 }
 
-.nav-logo .logo {
+.logo img {
   height: 50px;
-  width: auto;
+  margin-right: 10px;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: row; /* company name + tagline in one line */
-  align-items: center;
-  gap: 6px;
-  line-height: 1.2;
-}
-
-.brand-text h3 {
-  font-size: 20px;
-  font-weight: bold;
+.brand-text h1 {
+  font-size: 1.5rem;
+  color: #008000; /* Green brand heading */
 }
 
 .brand-text p {
-  font-size: 14px;
-  opacity: 0.9;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-/* Navigation Links */
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-nav ul li a {
-  color: #fff;
+.nav-links a {
   text-decoration: none;
+  color: #008000;              /* Green links */
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #f39c12; /* golden hover */
+.nav-links a:hover {
+  color: #005500;              /* Darker green when hovered */
 }
 
-/* =========================
-   Section Styles
-========================= */
-section {
-  padding: 60px 20px;
+/* ===== Hero Section ===== */
+#hero {
   text-align: center;
+  padding: 5rem 2rem;
+  background: #f8f8f8;         /* Light gray background for contrast */
+  color: #222;
 }
 
-#home {
-  position: relative;
-  background-image: url("ELTUH - Innovative Wildfire Solutions.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #008000;              /* Green hero title */
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
 
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #008000;         /* Green button */
   color: white;
-  padding: 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-#home > * {
-  position: relative;
-  z-index: 1;
+.btn:hover {
+  background: #005500;         /* Darker green on hover */
 }
 
+/* ===== About Section ===== */
 #about {
-  background: #fff;
-  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  background: #ffffff;
 }
 
-#contact {
-  background: #dfe6e9;
-  color: #333;
+#about img {
+  max-width: 400px;
+  border-radius: 10px;
 }
 
-/* =========================
-   Typography
-========================= */
-h1, h2 {
-  margin-bottom: 20px;
+.about-text {
+  flex: 1;
 }
 
-h1 {
-  font-size: 3em;
+.about-text h2 {
+  color: #008000;
+  margin-bottom: 1rem;
 }
 
-h2 {
-  font-size: 2em;
-  color: #0a3d62;
-}
-
-/* =========================
-   Contact Section
-========================= */
-.contact-section {
-  background: #000;
-  color: #fff;
-  padding: 60px 20px;
+/* ===== Solutions Section ===== */
+#solutions {
+  background: #f8f8f8;
+  padding: 4rem 2rem;
   text-align: center;
+}
+
+#solutions h3 {
+  color: #008000;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;         /* White card */
+  padding: 2rem;
   border-radius: 12px;
-  max-width: 800px;
-  margin: 50px auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  width: 300px;
+  border: 1px solid #ddd;      /* Light border */
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-.contact-section h2 {
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #008000;       /* Green accent on hover */
+}
+
+.card h4 {
+  color: #008000;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Team Section ===== */
+#team {
+  background: #f8f8f8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#team h3 {
+  color: #008000;
+  margin-bottom: 1rem;
   font-size: 2rem;
-  margin-bottom: 20px;
 }
 
-.contact-info {
+#team p{
+  max-width: 700px;
+  margin:0 auto 3rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.member {
+  background: #ffffff;
+  padding: 2rem 1.5 rem;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.member :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-color: #008000;       /* Green accent on hover */
+}
+
+.member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.member h4 {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin-bottom: 0.3rem;
 }
 
-.contact-info a {
-  color: #0062ff;
+.member p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+#contact h3 {
+  color: #008000;
+  margin-bottom: 1rem;
+}
+
+#contact-text a {
+  margin-top: 1rem;
+  color: #ffffff;
   text-decoration: none;
 }
 
-.contact-info a:hover {
+#contact-text a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
-/* =========================
-   Footer
-========================= */
+/* ===== Footer ===== */
 footer {
-  background: #0a3d62;
-  color: white;
+  background: #ffffff;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+  padding: 1rem;
+  color: #008000;              /* Green footer text */
+  font-size: 0.9rem;
+  border-top: 2px solid #008000;
 }
 
-/* =========================
-   Responsive Design
-========================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  nav {
-    padding: 10px 20px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  .contact-section {
-    margin: 30px 10px;
-    padding: 40px 15px;
-  }
-}
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin-left: 0;
-  }
-
-  #home {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  .contact-section {
-    max-width: 95%;
-    margin: 20px auto;
-  }
-}
-
-/* Very Small Devices */
-@media (max-width: 480px) {
-  .brand-text {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-  }
-
-  .brand-text h3 {
-    font-size: 18px;
-  }
-
-  .brand-text p {
-    font-size: 12px;
-  }
-
-  .contact-info {
-    font-size: 1rem;
-  }
-}
